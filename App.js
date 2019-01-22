@@ -12,12 +12,20 @@ export default class App extends Component {
 }
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <Header title = "To Do"/>
         {/*There will be  
         MyFlatList
         TextInput */}
+        <Input/>
       </View>      
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "space-between"
+  }
+});
