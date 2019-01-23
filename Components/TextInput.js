@@ -11,23 +11,22 @@ export default class Input extends Component {
           <TextInput style={styles.input}
 
             placeholder="I have to do..."
-  
-            value={this.state.text}
-  
             placeholderTextColor="#fff"
+  
+            value={this.state.text}  
             
             onChangeText={text => this.setState({ text: text })}
           />
-          
-        <Button style={styles.butt}             
-  
-            onPress={() => {
+        <View style={styles.butt} >
+
+        <Button onPress={() => {
             this.props.onAddTask(this.state.text);
             this.state.text = "";
             }}
   
             title="Add to list"
         />
+        </View>
           
         </View>
       );
@@ -36,8 +35,7 @@ export default class Input extends Component {
   
   const styles = StyleSheet.create({
     container: {
-      height: 70,
-      width: "100%",
+      flex: 1,
       alignItems: "center",
       justifyContent: "space-between",
       flexDirection: "row",
@@ -51,4 +49,3 @@ export default class Input extends Component {
         marginRight: 10
     }
   });
-
